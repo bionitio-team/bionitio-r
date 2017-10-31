@@ -3,7 +3,7 @@ dist: trusty
 
 language: r
 
-before_install:
+install:
   - ./.travis/install-dependencies.sh 
 
 script:
