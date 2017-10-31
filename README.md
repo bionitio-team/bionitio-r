@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/bionitio-team/bionitio-r.svg?branch=master)](https://travis-ci.org/bionitio-team/bionitio-r)
+
 # Overview
 
 This is an R implementation of bionitio.
