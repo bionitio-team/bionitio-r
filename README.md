@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/bionitio-team/bionitio-r.svg?branch=master)](https://travis-ci.org/bionitio-team/bionitio-r)
+[![travis](https://travis-ci.org/bionitio-team/bionitio-r.svg?branch=master)](https://travis-ci.org/bionitio-team/bionitio-r)
 
 # Overview
 
-This is an R implementation of bionitio.
+This is an R implementation of [bionitio](https://github.com/bionitio-team/bionitio).
 
 The program reads one or more input FASTA files. For each file it computes a variety of statistics, and then prints a summary of the statistics as output.
 
