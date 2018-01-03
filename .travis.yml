@@ -1,8 +1,7 @@
 sudo: true
 dist: trusty
-
 language: r
-
+cache: packages
 script:
   - ./functional_tests/test.sh ./bionitio.R
   - ./.travis/unit-test.sh
