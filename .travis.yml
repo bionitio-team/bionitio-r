@@ -3,9 +3,6 @@ dist: trusty
 
 language: r
 
-install:
-  - ./.travis/install-dependencies.sh 
-
 script:
   - ./functional_tests/test.sh ./bionitio.R
   - ./.travis/unit-test.sh

@@ -1,0 +1,8 @@
+Package: bionitio
+Version: 0.1.1
+Title: Demonstrating best practices for bioinformatics command line tools
+Author: Bionitio Team
+Maintainer: Bionitio Team
+Depends: R (>= 3.1.0), optparse, seqinr, logging, roxygen2, devtools, lintr
+Description: Demonstrating best practices for bioinformatics command line tools
+License: GPL (>= 2)
