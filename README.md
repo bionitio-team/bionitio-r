@@ -23,10 +23,10 @@ bionitio.R was tested on R version 3.2.
 
 ### Installing dependencies
 
-Bionitio requires the optparse and seqinr packages which can be installed by:
+Bionitio requires the optparse, seqinr, and logging packages which can be installed by:
 
 ```bash
-Rscript -e "install.packages(c('optparse', 'seqinr'), repos='http://cran.rstudio.org')"
+Rscript -e "install.packages(c('optparse', 'seqinr', 'logging'), repos='http://cran.rstudio.org')"
 ```
 
 ### Installing the bionitio package
