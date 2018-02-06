@@ -7,5 +7,5 @@ install:
   - ./.travis/install-dependencies.sh 
 
 script:
-  - ./functional_tests/test.sh bionitio.R
+  - ./functional_tests/bionitio-test.sh -p $TRAVIS_BUILD_DIR/bionitio.R -d functional_tests/test_data
   - ./.travis/unit-test.sh
