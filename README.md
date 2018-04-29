@@ -10,6 +10,16 @@ This program is released as open source software under the terms of [MIT License
 
 # Installing
 
+Clone this repository: 
+```
+git clone https://github.com/bionitio-team/bionitio-r
+```
+
+Move into the repository directory:
+```
+cd bionitio-r
+```
+
 ### Installing R
 
 Download R from [CRAN](https://www.r-project.org/) and follow the instructions
