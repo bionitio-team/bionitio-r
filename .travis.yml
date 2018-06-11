@@ -3,6 +3,9 @@ dist: trusty
 
 language: r
 
+r:
+  - 3.4
+
 install:
   - ./.travis/install-dependencies.sh 
 
