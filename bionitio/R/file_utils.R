@@ -1,3 +1,9 @@
+# Module      : file_utils.R 
+# Copyright   : (c) BIONITIO_AUTHOR, BIONITIO_DATE
+# License     : BIONITIO_LICENSE
+# Maintainer  : BIONITIO_EMAIL
+# Portability : POSIX
+
 fasta_exists <- function(fasta_files) {
   # Check if all FASTA files exist
   exists <- sapply(fasta_files, file.exists)

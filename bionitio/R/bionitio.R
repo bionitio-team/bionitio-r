@@ -1,3 +1,9 @@
+# Module      : bionitio.R 
+# Copyright   : (c) BIONITIO_AUTHOR, BIONITIO_DATE
+# License     : BIONITIO_LICENSE
+# Maintainer  : BIONITIO_EMAIL
+# Portability : POSIX
+
 #' Load a FASTA file
 #'
 #' @description Wrapper for seqinr \code{read.fasta()} to load in a FASTA file
