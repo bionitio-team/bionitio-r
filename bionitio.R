@@ -80,6 +80,8 @@ if (nchar(opts$log) != 0) {
   setLevel(level = "DEBUG", container = "writeToFile")
   loginfo("Program started")
   loginfo(paste("Command:", paste(commandArgs(), collapse = " ")))
+} else {
+  logReset()
 }
 
 # Read from stdin if argument is '-' or empty
