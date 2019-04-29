@@ -29,7 +29,7 @@ fasta_permission <- function(fasta_files) {
 invalid_fasta <- function(message="Invalid FASTA file", quit=FALSE) {
   # Handle invalid files by quitting if not an interactive session
   if (interactive() | (! quit)) {
-    stop(w$message)
+    stop(message)
   } else {
     message("ERROR: ", message)
     quit(status = 3)

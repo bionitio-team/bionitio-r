@@ -38,14 +38,14 @@ load_fasta_file <- function(filename, quit_on_error = TRUE) {
     },
     warning = function(w) {
       logging::logerror(w$message)
-      invalid_fasta(message=w$message, quit=quit_on_error)
+      invalid_fasta(message = w$message, quit = quit_on_error)
     }
   )
   sequences <- unlist(sequences)
   # Invalid files can have a sequence of 'NA>' in seqinr
   if (length(sequences) > 0 && sequences == "NA>") {
     logging::logerror("Invalid FASTA file")
-    invalid_fasta(quit=quit_on_error)
+    invalid_fasta(quit = quit_on_error)
   }
   return(sequences)
 }
