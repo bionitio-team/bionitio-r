@@ -11,9 +11,11 @@
 # variety of statistics, and then prints a summary of the statistics as output.
 
 suppressPackageStartupMessages({
-  library(optparse, quietly = TRUE)
-  library(bionitio, quietly = TRUE)
-  library(logging, quietly = TRUE)
+  suppressWarnings({
+    library(optparse, quietly = TRUE)
+    library(bionitio, quietly = TRUE)
+    library(logging, quietly = TRUE)
+  })
 })
 
 VERSION <- packageVersion("bionitio")
@@ -76,6 +78,7 @@ if (opts$version) {
 
 # Start logging
 if (nchar(opts$log) != 0) {
+  logReset()
   addHandler(writeToFile, file = opts$log)
   setLevel(level = "DEBUG", container = "writeToFile")
   loginfo("Program started")
