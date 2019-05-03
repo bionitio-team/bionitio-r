@@ -30,6 +30,7 @@ load_fasta_file <- function(filename, quit_on_error = TRUE) {
       if (e$message == "no line starting with a > character found") {
         logging::logwarn(paste(filename,
                                " has no lines starting with a > character."))
+        return(NULL)
       } else {
         logging::logerror(e$message)
         stop(e$message)
@@ -37,16 +38,15 @@ load_fasta_file <- function(filename, quit_on_error = TRUE) {
     },
     warning = function(w) {
       logging::logerror(w$message)
-      # Handle invalid files by quitting if not an interactive session
-      if (interactive() | (! quit_on_error)) {
-        stop(w$message)
-      } else {
-        message("ERROR: ", w$message)
-        quit(status = 3)
-      }
+      invalid_fasta(message = w$message, quit = quit_on_error)
     }
   )
   sequences <- unlist(sequences)
+  # Invalid files can have a sequence of 'NA>' in seqinr
+  if (length(sequences) > 0 && sequences == "NA>") {
+    logging::logerror("Invalid FASTA file")
+    invalid_fasta(quit = quit_on_error)
+  }
   return(sequences)
 }
 
