@@ -8,4 +8,4 @@ before_install:
 
 script:
   - docker run --entrypoint /bionitio/.travis/unit-test.sh bionitio-r
-  - docker run --entrypoint /bionitio/functional_tests/bionitio-test.sh bionitio-r bionitio -d /bionitio/functional_tests/test_data -v
+  - docker run --entrypoint /bionitio/functional_tests/bionitio-test.sh bionitio-r -p bionitio -d /bionitio/functional_tests/test_data -v
