@@ -4,13 +4,13 @@ FROM ubuntu:18.04
 WORKDIR /bionitio
 COPY . .
 
-Run apt-get update && apt-get install r-base r-base-dev -y
-Run Rscript -e "install.packages('optparse', repos='http://cran.rstudio.org')"
-Run Rscript -e "install.packages('seqinr', repos='http://cran.rstudio.org')"
-Run Rscript -e "install.packages('logging', repos='http://cran.rstudio.org')"
-Run Rscript -e "install.packages('roxygen2', repos='http://cran.rstudio.org')"
-Run Rscript -e "install.packages(c('devtools', 'lintr'), repos='http://cran.rstudio.org')"
-Run R CMD INSTALL bionitio
+RUN apt-get update && apt-get install -y r-base r-base-dev
+RUN Rscript -e "install.packages('optparse', repos='http://cran.rstudio.org')"
+RUN Rscript -e "install.packages('seqinr', repos='http://cran.rstudio.org')"
+RUN Rscript -e "install.packages('logging', repos='http://cran.rstudio.org')"
+RUN Rscript -e "install.packages('roxygen2', repos='http://cran.rstudio.org')"
+RUN Rscript -e "install.packages(c('devtools', 'lintr'), repos='http://cran.rstudio.org')"
+RUN R CMD INSTALL bionitio
 
 ENV PATH "/bionitio/:${PATH}"
 
