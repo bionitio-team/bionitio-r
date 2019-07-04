@@ -13,5 +13,3 @@ RUN Rscript -e "install.packages('lintr', repos='http://cran.rstudio.org')"
 RUN R CMD INSTALL bionitio
 
 ENV PATH "/bionitio/:${PATH}"
-
-ENTRYPOINT ["bionitio.R"]
