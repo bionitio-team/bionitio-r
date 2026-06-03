@@ -1,4 +1,4 @@
-FROM r-base:3.6.0
+FROM r-base:4.4.2
 WORKDIR /bionitio
 COPY . .
 
