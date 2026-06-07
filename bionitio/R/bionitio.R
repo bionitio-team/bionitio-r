@@ -43,7 +43,7 @@ load_fasta_file <- function(filename, quit_on_error = TRUE) {
   )
   sequences <- unlist(sequences)
   # Invalid files can have a sequence of 'NA>' in seqinr
-  if (length(sequences) > 0 && sequences == "NA>") {
+  if (length(sequences) > 0 && any(sequences == "NA>")) {
     logging::logerror("Invalid FASTA file")
     invalid_fasta(quit = quit_on_error)
   }
